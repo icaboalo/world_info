@@ -3,6 +3,7 @@ package diana.com.worldinfo.io;
 import java.util.ArrayList;
 
 import diana.com.worldinfo.io.model.ApiConstants;
+import diana.com.worldinfo.io.model.CityDetailResponse;
 import retrofit.Callback;
 import retrofit.RestAdapter;
 
@@ -26,5 +27,9 @@ public class ApiClient {
 //    @GET AutoComplete
     public static void searchAutoComplete(String query, Callback<ArrayList<String>> autoCompleteApiResponse){
         getApiService().searchAutoComplete(query, autoCompleteApiResponse);
+    }
+
+    public static void searchCityDescription(String city, Callback<CityDetailResponse> cityDetailsApiResponse){
+        getApiService().searchCityDetails(city, cityDetailsApiResponse);
     }
 }
